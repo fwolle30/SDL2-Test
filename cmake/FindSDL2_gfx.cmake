@@ -1,4 +1,4 @@
-FIND_PATH(SDL2_gfx_INCLUDE_DIR proxy.h PATH_SUFFIXES SDL2_gfxPrimitives.h)
+FIND_PATH(SDL2_gfx_INCLUDE_DIR SDL2_gfxPrimitives.h PATH_SUFFIXES SDL2)
 FIND_LIBRARY(SDL2_gfx_LIBRARIES NAMES SDL2_gfx )
 
 # Set library version
