@@ -1,0 +1,12 @@
+FIND_PATH(SDL2_gfx_INCLUDE_DIR proxy.h PATH_SUFFIXES SDL2_gfxPrimitives.h)
+FIND_LIBRARY(SDL2_gfx_LIBRARIES NAMES SDL2_gfx )
+
+# Set library version
+SET(SDL2_gfx_VERSION 2.0.0)
+SET(SDL2_gfx_VERSION_MAJOR 2)
+SET(SDL2_gfx_VERSION_MINOR 0)
+SET(SDL2_gfx_VERSION_PATCH 0)
+
+# Give output, should this be wished (this handles also QUIET and REQUIRED
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(SDL2_gfx DEFAULT_MSG SDL2_gfx_LIBRARIES SDL2_gfx_INCLUDE_DIR)

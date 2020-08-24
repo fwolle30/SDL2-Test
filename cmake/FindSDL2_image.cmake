@@ -1,0 +1,12 @@
+FIND_PATH(SDL2_image_INCLUDE_DIR proxy.h PATH_SUFFIXES SDL_image.h)
+FIND_LIBRARY(SDL2_image_LIBRARIES NAMES SDL2_image )
+
+# Set library version
+SET(SDL2_image_VERSION 2.0.0)
+SET(SDL2_image_VERSION_MAJOR 2)
+SET(SDL2_image_VERSION_MINOR 0)
+SET(SDL2_image_VERSION_PATCH 0)
+
+# Give output, should this be wished (this handles also QUIET and REQUIRED
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(SDL2_image DEFAULT_MSG SDL2_image_LIBRARIES SDL2_image_INCLUDE_DIR)
