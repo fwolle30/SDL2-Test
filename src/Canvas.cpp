@@ -23,7 +23,7 @@ void Color::operator=(Color c)
 }
 
 Canvas::Canvas(SDL_Rect p_rect)
-    : canvasRect(p_rect), resolution(10), grid(nullptr), circles(nullptr), circleCount(30), step(0.0)
+    : canvasRect(p_rect), resolution(10), grid(nullptr), circles(nullptr), circleCount(10), step(0.0)
 {
     int size_x = canvasRect.w;
     int size_y = canvasRect.h;
@@ -40,7 +40,7 @@ Canvas::Canvas(SDL_Rect p_rect)
     {
         int x = (rand() % (size_x - 100)) + 100;
         int y = (rand() % (size_y - 100)) + 100;
-        int r = (((rand() % 100) + 100) / 2) * 2;
+        int r = (((rand() % 100) + 30) / 2) * 2;
 
         int dx = 0, dy = 0;
         int d = ((rand() % 8)) / 2;
@@ -114,7 +114,7 @@ void Canvas::squareMarch(SDL_Renderer *renderer)
     int size_x = canvasRect.w / resolution + 1;
     int size_y = canvasRect.h / resolution + 1;
 
-    float blobThreshold = 2.4;
+    float blobThreshold = 1;
 
     for (int y = 0; y < size_y; y++)
     {
